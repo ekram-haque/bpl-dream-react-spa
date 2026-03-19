@@ -2,7 +2,7 @@ import React from "react";
 import Currency from "../assets/currency.png";
 import logo from "../assets/logo.png";
 
-const Navbar = () => {
+const Navbar = ({availableCoins}) => {
   return (
     <div className="navbar  shadow-sm">
       <div className="w-11/12 mx-auto flex justify-center items-center">
@@ -56,7 +56,7 @@ const Navbar = () => {
             </li>
           </ul>
           <button className="btn">
-            <span>0</span>
+            <span>{availableCoins}</span>
             <span>Coin</span>
             <img src={Currency} alt="" />
           </button>

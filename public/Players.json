@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Shakib Al Hasan",
+    "price": 120000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.5,
+    "battingStyle": "Left-handed",
+    "bowlingStyle": "Slow left-arm orthodox",
+    "country": "Bangladesh",
+    "role": "All-Rounder"
+  },
+  {
+    "id": 2,
+    "name": "Tamim Iqbal",
+    "price": 100000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.0,
+    "battingStyle": "Left-handed",
+    "bowlingStyle": "None",
+    "country": "Bangladesh",
+    "role": "Batsman"
+  },
+  {
+    "id": 3,
+    "name": "Mushfiqur Rahim",
+    "price": 95000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.2,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "None",
+    "country": "Bangladesh",
+    "role": "Batsman"
+  },
+  {
+    "id": 4,
+    "name": "Mahmudullah Riyad",
+    "price": 90000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 8.8,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Off-spin",
+    "country": "Bangladesh",
+    "role": "All-Rounder"
+  },
+  {
+    "id": 5,
+    "name": "Andre Russell",
+    "price": 130000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.6,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm fast",
+    "country": "West Indies",
+    "role": "All-Rounder"
+  },
+  {
+    "id": 6,
+    "name": "Rashid Khan",
+    "price": 125000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.7,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Leg spin",
+    "country": "Afghanistan",
+    "role": "Bowler"
+  },
+  {
+    "id": 7,
+    "name": "Faf du Plessis",
+    "price": 110000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.1,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "None",
+    "country": "South Africa",
+    "role": "Batsman"
+  },
+  {
+    "id": 8,
+    "name": "David Warner",
+    "price": 115000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.3,
+    "battingStyle": "Left-handed",
+    "bowlingStyle": "None",
+    "country": "Australia",
+    "role": "Batsman"
+  },
+  {
+    "id": 9,
+    "name": "Babar Azam",
+    "price": 120000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.4,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "None",
+    "country": "Pakistan",
+    "role": "Batsman"
+  },
+  {
+    "id": 10,
+    "name": "Hardik Pandya",
+    "price": 125000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.2,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Right-arm fast-medium",
+    "country": "India",
+    "role": "All-Rounder"
+  },
+  {
+    "id": 11,
+    "name": "Jos Buttler",
+    "price": 115000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.3,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "None",
+    "country": "England",
+    "role": "Batsman"
+  },
+  {
+    "id": 12,
+    "name": "Trent Boult",
+    "price": 105000,
+    "img": "https://bssnews.net/assets/news_photos/2025/04/06/image-260618-1743942449.jpg",
+    "ratings": 9.0,
+    "battingStyle": "Right-handed",
+    "bowlingStyle": "Left-arm fast",
+    "country": "New Zealand",
+    "role": "Bowler"
+  }
+]

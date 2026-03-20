@@ -16,6 +16,12 @@ function App() {
   const [availableCoins,setAvailableCoins] = useState(600000);
   const [buyingPlayer,setBuyingPlayer] = useState([]);
 
+  const removePlayer =(p) =>{
+    const filteredPlayer = buyingPlayer.filter(player => player.id !== p.id)
+    setBuyingPlayer(filteredPlayer)
+    setAvailableCoins(availableCoins + p.price)
+    
+  }
   
 
 
@@ -37,7 +43,7 @@ toggle===true ?
       <AvailablePlayers playerPromise={playerPromise} availableCoins={availableCoins} setAvailableCoins={setAvailableCoins} buyingPlayer={buyingPlayer} setBuyingPlayer={setBuyingPlayer} />
       </Suspense>
   :
-  <SelectedPlayers buyingPlayer={buyingPlayer}/>
+  <SelectedPlayers buyingPlayer={buyingPlayer} removePlayer={removePlayer}/>
 }
 
       

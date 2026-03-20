@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { toast } from "react-toastify";
 
 const Player = ({
   player,
@@ -53,8 +54,12 @@ const Player = ({
           disabled={isSelected}
           onClick={() => {
             if (availableCoins < player.price) {
-              alert("not have enough money");
+              toast("not have enough money");
               return;
+            }
+            if(buyingPlayer.length ===6){
+                toast('select 6 players')
+                return
             }
             setIsSelected(true);
             setAvailableCoins(availableCoins - player.price);

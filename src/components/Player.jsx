@@ -1,9 +1,18 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const Player = ({player,availableCoins,setAvailableCoins}) => {
-    const [isSelected,setIsSelected] = useState(false)
-    return (
-    <div className={` rounded-2xl mt-5 shadow-md p-4 ${isSelected?'bg-gray-400':'bg-white'}`}>
+const Player = ({
+  player,
+  availableCoins,
+  setAvailableCoins,
+  buyingPlayer,
+  setBuyingPlayer,
+}) => {
+  const [isSelected, setIsSelected] = useState(false);
+
+  return (
+    <div
+      className={` rounded-2xl mt-5 shadow-md p-4 ${isSelected ? "bg-gray-400" : "bg-white"}`}
+    >
       {/* Image */}
       <img
         src={player.img}
@@ -23,9 +32,7 @@ const Player = ({player,availableCoins,setAvailableCoins}) => {
           <span>🏳️</span>
           <p>{player.country}</p>
         </div>
-        <span className=" px-2 py-1 rounded-md text-xs">
-          {player.role}
-        </span>
+        <span className=" px-2 py-1 rounded-md text-xs">{player.role}</span>
       </div>
 
       <hr className="my-3" />
@@ -42,19 +49,24 @@ const Player = ({player,availableCoins,setAvailableCoins}) => {
       {/* Price + Button */}
       <div className="flex justify-between items-center mt-4">
         <p className="font-semibold">Price: ${player.price}</p>
-        <button disabled={isSelected} onClick={() =>{
-            if(availableCoins < player.price){
-                alert('not have enough money')
-                return
+        <button
+          disabled={isSelected}
+          onClick={() => {
+            if (availableCoins < player.price) {
+              alert("not have enough money");
+              return;
             }
-            setIsSelected(true)
-            setAvailableCoins(availableCoins -player.price)
-        }} className="btn bg-white text-black">
-          {isSelected?'Selected':'Choose Player'}
+            setIsSelected(true);
+            setAvailableCoins(availableCoins - player.price);
+            setBuyingPlayer([...buyingPlayer, player]);
+          }}
+          className="btn bg-white text-black"
+        >
+          {isSelected ? "Selected" : "Choose Player"}
         </button>
       </div>
     </div>
-    );
+  );
 };
 
 export default Player;

@@ -4,6 +4,8 @@ import AvailablePlayers from "./components/AvailablePlayers";
 import { Suspense, useState } from "react";
 import SelectedPlayers from "./components/SelectedPlayers";
 import { ToastContainer } from "react-toastify";
+import Banner from "./components/Banner";
+import FooterSection from "./components/Footer";
 
 const fetchPlayers = async () => {
   const res = await fetch("/Players.json");
@@ -25,6 +27,7 @@ function App() {
   return (
     <div className="bg-white text-black min-h-screen">
       <Navbar availableCoins={availableCoins} />
+      <Banner/>
       <div className="flex justify-between items-center w-300 mx-auto mt-7">
         <h2 className="font-bold  text-2xl">{`${toggle === true ? "Available Players" : `Selected Players (${buyingPlayer.length}/6)`}`}</h2>
         <div className="flex py-3 ">
@@ -57,11 +60,13 @@ function App() {
         </Suspense>
       ) : (
         <SelectedPlayers
+        setToggle={setToggle}
           buyingPlayer={buyingPlayer}
           removePlayer={removePlayer}
         />
       )}
        <ToastContainer />
+       <FooterSection/>
     </div>
   );
 }

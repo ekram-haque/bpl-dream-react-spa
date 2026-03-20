@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectedPlayers = ({buyingPlayer,removePlayer}) => {
+const SelectedPlayers = ({buyingPlayer,removePlayer,setToggle}) => {
 
     const handleRemove =(player)=>{
         removePlayer(player)
@@ -23,6 +23,7 @@ const SelectedPlayers = ({buyingPlayer,removePlayer}) => {
                 </div>
             ))
            }
+           <button onClick={()=>setToggle(true)} className='btn bg-[#E7FE29] text-black rounded-lg mt-10'>add more player</button>
         </div>
     );
 };

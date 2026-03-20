@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { toast } from "react-toastify";
 
 const Player = ({
@@ -8,7 +8,8 @@ const Player = ({
   buyingPlayer,
   setBuyingPlayer,
 }) => {
-  const [isSelected, setIsSelected] = useState(false);
+  //   const [isSelected, setIsSelected] = useState(false);
+  const isSelected = buyingPlayer.some((p) => p.id === player.id);
 
   return (
     <div
@@ -18,7 +19,7 @@ const Player = ({
       <img
         src={player.img}
         alt={player.name}
-        className=" object-cover rounded-xl"
+        className="h-50 w-88  object-cover rounded-xl"
       />
 
       {/* Name */}
@@ -50,22 +51,28 @@ const Player = ({
       {/* Price + Button */}
       <div className="flex justify-between items-center mt-4">
         <p className="font-semibold">Price: ${player.price}</p>
+
         <button
           disabled={isSelected}
           onClick={() => {
             if (availableCoins < player.price) {
-              toast("not have enough money");
+              toast("Not enough money");
               return;
             }
-            if(buyingPlayer.length ===6){
-                toast('select 6 players')
-                return
+
+            if (buyingPlayer.length === 6) {
+              toast("Select only 6 players");
+              return;
             }
-            setIsSelected(true);
+
             setAvailableCoins(availableCoins - player.price);
             setBuyingPlayer([...buyingPlayer, player]);
           }}
-          className="btn bg-white text-black"
+          className={`btn ${
+            isSelected
+              ? "bg-gray-400 cursor-not-allowed"
+              : "bg-white text-black"
+          }`}
         >
           {isSelected ? "Selected" : "Choose Player"}
         </button>
